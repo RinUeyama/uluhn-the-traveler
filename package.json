@@ -8,6 +8,9 @@
     "lint": "next lint",
     "lint:css": "stylelint '**/*.{css,scss,sass}'",
     "test": "jest --watch",
+    "cypress": "cypress open",
+    "cypress:latest": "next build | next start |  cypress open",
+    "cypress:headless": "cypress run",
     "docs": "docsify serve docs -p 8000 -o"
   },
   "dependencies": {
@@ -20,6 +23,7 @@
     "@testing-library/react": "^12.1.2",
     "@types/node": "16.11.12",
     "@types/react": "17.0.37",
+    "cypress": "^9.1.1",
     "docsify-cli": "^4.4.3",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.7",
