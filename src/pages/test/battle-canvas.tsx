@@ -10,8 +10,8 @@ const SAMPLE_PROPS = {
   enemy: {
     name: '',
     image: {
-      // src: 'src/assets/images/enemy.jpg',
-      src: 'https://picsum.photos/id/817/200/300',
+      // src: '../../assets/images/enemy.jpg',
+      src: 'https://picsum.photos/id/807/200/300',
       alt: ''
     }
   },

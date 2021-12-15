@@ -39,7 +39,7 @@ const BattleScreen: React.VFC<IBattleScreen> = ({ backgroundImage, enemy }) => {
       resolution: window.devicePixelRatio || 1,
       antialias: true,
       transparent: true,
-      // resizeTo: window TODO: Retina だと動かない
+      // resizeTo: window TODO: Retina だと動かない、CSSでサイズ指定したDOMのほうがいいかも
     });
     element.appendChild(app.view);
   
@@ -55,15 +55,16 @@ const BattleScreen: React.VFC<IBattleScreen> = ({ backgroundImage, enemy }) => {
     app.stage.addChild(backgroundSprite)
 
     const enemySprite = PIXI.Sprite.from(enemy.image.src);
-    enemySprite.anchor.set(0.5, 0.5);
+    enemySprite.anchor.set(0.5, -0.5);
     enemySprite.x = app.screen.width / 2;
     enemySprite.y = app.screen.height / 2;
     app.stage.addChild(enemySprite);
 
     // TODO: React-Spring の文字列で指定可能にする
+    let t = 0;
     app.ticker.add((delta) => {
-      const r = delta % 10 > 5 ? 6 : -6;
-      enemySprite.y += r;
+      t += delta;
+      enemySprite.y = app.screen.height * Math.sin(0.04 * t) / 32;
     })
   }
 
