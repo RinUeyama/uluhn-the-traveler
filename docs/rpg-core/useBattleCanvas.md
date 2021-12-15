@@ -8,24 +8,21 @@ Creates `<canvas>` element that contains front-viewed enemy/ies, skill VFX, fiel
 import { useBattleCanvas } from "react-use-rpg";
 
 const Demo = () => {
-  const [battleCanvas, enemies, setEnemies, setSkillVFX, setFieldEffect, ref] =
+  const [battleCanvas, setEnemies, setSkillVFX, setFieldEffect, ref] =
     useBattleCanvas({
       backgroundSrc: "",
       enemies: [
         {
-          src: "",
-          alt: "",
+          textures: []
           name: "",
         },
         {
-          src: "",
-          alt: "",
+          images: ['']
           targeted: true,
         },
       ],
       fieldEffect: {
-        src: "",
-        alt: "",
+        textures: ['']
         shouldRemain: true,
       },
     });
