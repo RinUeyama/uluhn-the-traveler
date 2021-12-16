@@ -14,11 +14,11 @@ const TemplateBattle: React.VFC<ITemplateBattleProps> = ({ background, enemy, vf
 
     const app = createPixiApp(element);
 
-    const backgroundContainer = createCommonBackgroundContainer({ app, background })
+    const backgroundContainer = createCommonBackgroundContainer({ app, background });
     app.stage.addChild(backgroundContainer);
 
-    const enemyContaier = createBattleEnemyContainer({ app, enemy })
-    app.stage.addChild(enemyContaier);
+    const enemyContainer = createBattleEnemyContainer({ app, enemy })
+    app.stage.addChild(enemyContainer);
 
     console.log('VFXはまだ実装しなくてもいいかな', vfx)
   }
