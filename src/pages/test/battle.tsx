@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import { NextPage } from "next";
 import dynamic from "next/dynamic";
 
 const SAMPLE_PROPS = {
@@ -17,14 +17,14 @@ const SAMPLE_PROPS = {
   },
 }
 
-const Index: GetStaticProps = () => {
-  const Canvas = dynamic(() => import('src/components/Battle/BattleScreen'), {
+const Index: NextPage = () => {
+  const Canvas = dynamic(() => import('src/components/Battle/Template/index'), {
     ssr: false
   })
 
   return (
     <section>
-      <Canvas {...SAMPLE_PROPS} />
+      <Canvas {...{ background: { image: SAMPLE_PROPS.backgroundImage }, vfx: '', enemy: SAMPLE_PROPS.enemy }} />
     </section>
   )
 }
