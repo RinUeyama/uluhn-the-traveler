@@ -1,0 +1,10 @@
+.template-battle {
+  position: relative;
+
+  > .enemy-hp-bar {
+    position: absolute;
+    top: 30px;
+    left: 10vw;
+    width: 80vw;
+  }
+}

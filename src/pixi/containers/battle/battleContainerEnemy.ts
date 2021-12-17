@@ -8,7 +8,6 @@ export type IImage = {
 }
 
 export type IPixiEnemy = {
-  name: string,
   image: IImage,
   options?: IPixiSpriteOptions
 }

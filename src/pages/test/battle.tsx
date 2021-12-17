@@ -24,7 +24,7 @@ const Index: NextPage = () => {
 
   return (
     <section>
-      <Canvas {...{ background: { image: SAMPLE_PROPS.backgroundImage }, vfx: '', enemy: SAMPLE_PROPS.enemy }} />
+      <Canvas containers={{background: { image: SAMPLE_PROPS.backgroundImage }, vfx: '', enemy: SAMPLE_PROPS.enemy }} enemyHpBar={{ name: '敵だよ', hp: 80, maxHp: 120 }} />
     </section>
   )
 }
