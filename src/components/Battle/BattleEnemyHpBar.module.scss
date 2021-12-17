@@ -1,9 +1,15 @@
 .enemy-hp-bar {
   background-color: black;
   border: 1px solid #fff;
-  height: 20px;
+  height: 0.5rem;
+  margin: 0 20vw;
   position: relative;
-  width: 100%;
+  width: 60vw;
+
+  &.-boss {
+    margin: 0 8vw 0 12vw;
+    width: 80vw;
+  }
 
   > .hp {
     background-color: red;
@@ -13,7 +19,11 @@
     top: 0;
   }
 
-  > .name {
-    text-shadow: 1px 1px #fff;
+  > .icon {
+    height: 8rem;
+    left: -5rem;
+    position: absolute;
+    top: -4rem;
+    width: 8rem;
   }
 }

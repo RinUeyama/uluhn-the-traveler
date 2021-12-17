@@ -16,7 +16,8 @@
     ],
     "font-family-name-quotes": "always-where-required",
     "string-quotes": "single",
-    "order/properties-alphabetical-order": true
+    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^-([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
   },
-  "ignoreFiles": ["**/node_modules/**", "/out/**"]
+  "ignoreFiles": ["**/node_modules/**", "out/**"]
 }

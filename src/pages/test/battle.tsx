@@ -1,17 +1,18 @@
 import { NextPage } from "next";
 import dynamic from "next/dynamic";
+import SampleBackgroundImage from 'src/assets/images/sample-background.png'
+import SampleEnemyImage from 'src/assets/images/sample-enemy.png'
 
 const SAMPLE_PROPS = {
   backgroundImage: {
     //src: 'src/assets/images/background.png',
-    src: 'https://picsum.photos/id/537/800/800',
+    src: SampleBackgroundImage.src,
     alt: '',
   },
   enemy: {
     name: '',
     image: {
-      // src: '../../assets/images/enemy.jpg',
-      src: 'https://picsum.photos/id/807/200/300',
+      src: SampleEnemyImage.src,
       alt: ''
     }
   },
@@ -24,7 +25,7 @@ const Index: NextPage = () => {
 
   return (
     <section>
-      <Canvas containers={{background: { image: SAMPLE_PROPS.backgroundImage }, vfx: '', enemy: SAMPLE_PROPS.enemy }} enemyHpBar={{ name: '敵だよ', hp: 80, maxHp: 120 }} />
+      <Canvas containers={{background: { image: SAMPLE_PROPS.backgroundImage }, vfx: '', enemy: SAMPLE_PROPS.enemy }} enemyHpBar={{ hp: 80, maxHp: 120, type: 'boss' }} />
     </section>
   )
 }

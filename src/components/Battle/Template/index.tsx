@@ -31,7 +31,7 @@ const TemplateBattle: React.VFC<ITemplateBattleProps> = ({ containers, enemyHpBa
   return (
     <div className={style['template-battle']} ref={onElementLoaded}>
       <div className={style['enemy-hp-bar']}>
-        <BattleEnemyHpBar {...enemyHpBar} />
+        <BattleEnemyHpBar {...enemyHpBar} type='boss' />
       </div>
     </div>
   )
