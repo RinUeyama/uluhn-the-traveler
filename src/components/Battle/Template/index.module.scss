@@ -2,9 +2,9 @@
   position: relative;
 
   > .enemy-hp-bar {
+    left: 10vw;
     position: absolute;
     top: 30px;
-    left: 10vw;
     width: 80vw;
   }
 }
