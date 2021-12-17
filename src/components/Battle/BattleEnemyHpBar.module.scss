@@ -1,0 +1,13 @@
+.enemy-hp-bar {
+  width: 100%;
+  background-color: black;
+  border: 1px solid #fff;
+
+  > .hp {
+    background-color: red;
+  }
+
+  > .name {
+    text-shadow: 1px 1px #fff;
+  }
+}
