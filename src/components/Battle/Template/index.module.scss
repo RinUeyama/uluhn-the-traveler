@@ -5,4 +5,19 @@
     position: absolute;
     top: 2rem;
   }
+
+  > .enemy-status {
+    position: absolute;
+    top: 30vh;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  > .enemy-action {
+    position: absolute;
+    top: 30vh;
+    right: 10vw;
+    width: 6rem;
+    height: 6rem;
+  }
 }
