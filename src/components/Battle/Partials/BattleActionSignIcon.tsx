@@ -13,7 +13,7 @@ export const BattleActionSign: React.VFC<IBattleActionSignProps> = ({
   return (
     <div className={style['battle-action-sign']}>
       <img className={style['icon']} src={type.src} alt={type.name} />
-      {potency && <p aria-label='効果量'>{potency}</p>}
+      {potency && <p className={style['potency']} aria-label='効果量'>{potency}</p>}
       {/** TODO: タップしたらモーダルで説明を出す */}
     </div>
   )
