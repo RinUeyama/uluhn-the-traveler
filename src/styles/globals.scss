@@ -1,0 +1,269 @@
+/* stylelint-disable */
+
+/**
+ * reset
+ */
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/**
+ * variable
+ */
+:root {
+  /** space */
+  --space-unit: 0.5rem;
+  --space-xs: 1 * var(--space-unit);
+  --space-s: 2 * * var(--space-unit);
+  --space-m: 3 * var(--space-unit);
+  --space-l: 5 * var(--space-unit);
+  --space-xl: 8 * var(--space-unit);
+  --space-xxl: 13 * var(--space-unit);
+
+  /** color */
+  --color-green: #86ab7a;
+  --color-green-lighten: #9ac58c;
+  --color-green-darken :#729168;
+  --color-white: #fef8e7;
+  --color-white-lighten: #ffffff;
+  --color-white-darken: #d8d3c4;
+  --color-beige: #e0c3ac;
+  --color-beige-lighten: #ffe0c6;
+  --color-beige-darken: #bea692;
+  --color-lightblue: #616f8d;
+  --color-lightblue-lighten: #7080a2;
+  --color-lightblue-darken: #525e78;
+  --color-darkblue: #2f3846;
+  --color-darkblue-lighten: #364051;
+  --color-darkblue-darken: #28303c;
+}
+
+/*
+ * typography
+ */
+/** New Tegomin */
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+/** Noto Sans JP */
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Noto+Sans+JP:wght@100&display=swap');
+/** Shippori Mincho */
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Noto+Sans+JP:wght@100&family=Shippori+Mincho:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  color: var(--color-darkblue);
+  font-family: 'Shippori Mincho', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  font-kerning: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /** 特殊な文字 */
+  font-variant-ligatures: common-ligatures;
+  /** ハイフン */
+  -ms-hyphenate-limit-chars: 6 3 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+  line-height: 1.75;
+}
+
+@media screen and (min-width: 60em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 120em) {
+  body {
+    font-size: 1.375rem;
+  }
+}
+
+/** 要素のフォントサイズ */
+h1 {
+  /** font-size: calc(0.8rem + 3.2vmin); */
+  font-size: 2.666rem;
+  font-variant-numeric: lining-nums;
+  line-height: 44px;
+  text-align: center;
+}
+h2 {
+  /** font-size: calc(0.5rem + 2.3vmin); */
+  font-size: 1.6rem;
+  font-variant-numeric: lining-nums;
+  line-height: 28px;
+}
+h3 {
+  /** font-size: calc(1rem + 0.6vmin); */
+  font-size: 1.143rem;
+  font-variant-numeric: lining-nums;
+  line-height: 20px;
+}
+h4,
+h5,
+h6 {
+  /** font-size: calc(1rem + 0.3vmin); */
+  font-variant-numeric: lining-nums;
+}
+p {
+  font-variant-numeric: oldstyle-nums; /** 1回拡大すると表示がおかしくなる */
+}
+
+p + p {
+  margin-top: 0;
+}
+
+/** サンクンキャップ */
+article p:first-of-type::first-letter {
+  initial-letter: 3 2;
+}
+
+/** フルーロン */
+hr {
+  height: calc(2em + 1.6vmin);
+  border: 0;
+  margin: 4.5em auto;
+  background: url('/assets/icons/fleuron.svg') center no-repeat;
+  background-size: contain;
+  content: '#10086';
+}
+
+/** リストの初期化 */
+ol {
+  padding-left: 0;
+  margin-left: 0;
+  counter-reset: initialized-list;
+  list-style: none;
+}
+
+ol li::before {
+  margin-right: 1em;
+  margin-left: -1.5em;
+  content: counter(initialized-list);
+  counter-increment: initialized-list;
+}
+
+/** リンク */
+a {
+  border-bottom: 1px solid var(--color-beige);
+  text-decoration: none;
+  outline-color: var(--color-green);
+}
+
+@supports (text-decoration-skip-ink: auto) {
+  a {
+    border-bottom: 0;
+    text-decoration: underline solid var(--color-beige);
+    text-decoration-skip-ink: auto;
+  }
+}
+
+button {
+  outline-color: var(--color-green);
+}
+input {
+  outline-color: var(--color-green);
+}
+
+/** 上つき文字／下つき文字 */
+sub {
+  font-feature-settings: 'subs' 1;
+}
+@supports (font-variant-position: sub) {
+  sub {
+    font-feature-settings: normal;
+    font-variant-position: sub;
+  }
+}
+@supports ((font-variant-position: sub) or (font-feature-settings: 'subs' 1)) {
+  sub {
+    font-size: inherit;
+    vertical-align: baseline;
+  }
+}
+sup {
+  font-feature-settings: 'sups' 1;
+}
+@supports (font-variant-position: super) {
+  sup {
+    font-feature-settings: normal;
+    font-variant-position: super;
+  }
+}
+@supports (
+  (font-variant-position: super) or (font-feature-settings: 'sups' 1)
+) {
+  sup {
+    font-size: inherit;
+    vertical-align: baseline;
+  }
+}
+
+/** 約物 */
+blockquote {
+  position: relative;
+  text-align: center;
+}
+blockquote::before {
+  margin-left: -0.6ch;
+  content: '&ldquo';
+}
+blockquote::after {
+  margin-right: -1.1ch;
+  content: '.&rdquo';
+}
+
+/** 記事レイアウト */
+article {
+  width: 100%;
+  max-width: min(38em, calc(100% - 48px));
+  margin-right: auto;
+  margin-left: auto;
+}
+article p {
+  margin-bottom: var(--space-m);
+  text-indent: 1.5em;
+}
+aside {
+  margin: 1em;
+
+  @media only screen and (min-width: 60em) {
+    width: 10em;
+    margin-top: 0;
+    margin-left: -11em;
+    float: left;
+  }
+
+  @media only screen and (min-width: 49em) {
+    width: 10em;
+    margin-top: 0;
+    margin-left: -5em;
+    float: left;
+  }
+}
+article details {
+  margin-top: var(--space-m);
+}
+article details > p {
+  margin-bottom: 0;
+  margin-left: var(--space-l);
+  font-size: 0.9em;
+}
+article details > p + p {
+  margin-top: var(--space-xs);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

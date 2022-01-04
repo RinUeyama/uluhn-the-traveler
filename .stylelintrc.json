@@ -18,5 +18,5 @@
     "string-quotes": "single",
     "order/properties-alphabetical-order": true
   },
-  "ignoreFiles": ["**/node_modules/**", "/out/**"]
+  "ignoreFiles": ["**/node_modules/**", "/out/**", "/src/styles/**"]
 }
