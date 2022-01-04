@@ -9,7 +9,7 @@
     "lint:css": "stylelint '**/*.{css,scss,sass}'",
     "test": "jest --watch",
     "cypress": "cypress open",
-    "cypress:latest": "next build | next start |  cypress open",
+    "cypress:latest": "next build | next start | cypress open",
     "cypress:headless": "cypress run",
     "docs": "docsify serve docs -p 8000 -o",
     "out": "http-server ./out -p 8888 -o"
