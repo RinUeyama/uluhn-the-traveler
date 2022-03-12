@@ -1,6 +1,6 @@
 {
   "plugins": ["stylelint-order"],
-  "extends": ["stylelint-config-standard"],
+  "extends": ["stylelint-config-standard-scss"],
   "rules": {
     "at-rule-no-unknown": [
       true,
@@ -18,5 +18,5 @@
     "string-quotes": "single",
     "order/properties-alphabetical-order": true
   },
-  "ignoreFiles": ["**/node_modules/**", "/out/**", "/src/styles/**"]
+  "ignoreFiles": ["**/node_modules/**", "**/out/**", "/src/styles/**"]
 }

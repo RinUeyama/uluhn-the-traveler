@@ -16,6 +16,17 @@ textarea {
 }
 
 /**
+ * font
+ */
+/** New Tegomin */
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+/** Noto Sans JP */
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Noto+Sans+JP:wght@100&display=swap');
+/** Shippori Mincho */
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Noto+Sans+JP:wght@100&family=Shippori+Mincho:wght@500&display=swap');
+
+
+/**
  * variable
  */
 :root {
@@ -44,19 +55,11 @@ textarea {
   --color-darkblue: #2f3846;
   --color-darkblue-lighten: #364051;
   --color-darkblue-darken: #28303c;
-}
 
 /*
  * typography
  * TODO: EU対策
  */
-/** New Tegomin */
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-/** Noto Sans JP */
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Noto+Sans+JP:wght@100&display=swap');
-/** Shippori Mincho */
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Noto+Sans+JP:wght@100&family=Shippori+Mincho:wght@500&display=swap');
-
 body {
   margin: 0;
   padding: 0;
@@ -266,5 +269,4 @@ article details > p + p {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
+}}
