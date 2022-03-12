@@ -6,7 +6,4 @@ module.exports = {
       "pixi.js": "pixi.js-legacy",
     },
   },
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
 };
