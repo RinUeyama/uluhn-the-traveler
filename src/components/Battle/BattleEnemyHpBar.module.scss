@@ -1,10 +1,12 @@
 .enemy-hp-bar {
-  background-color: black;
-  border: 1px solid #fff;
-  height: 0.5rem;
+  background-color: var(--color-darkblue);
+  height: 0.6rem;
   margin: 0 20vw;
   position: relative;
   width: 60vw;
+  border: 1px solid var(--color-beige-darken);
+  backdrop-filter: blur(4px) sepia(0.15);
+  filter: drop-shadow(2px 2px var(--color-darkblue));
 
   &.-boss {
     margin: 0 8vw 0 12vw;
@@ -12,7 +14,7 @@
   }
 
   > .hp {
-    background-color: red;
+    background-color: var(--color-beige-lighten);
     height: 100%;
     left: 0;
     position: absolute;
@@ -25,5 +27,6 @@
     position: absolute;
     top: -2rem;
     width: 4rem;
+    filter: drop-shadow(4px 4px var(--color-darkblue));
   }
 }
