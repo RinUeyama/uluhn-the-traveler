@@ -52,8 +52,8 @@ export const createBattleEnemyContainer = ({app, enemy}: IBattleEnemyContainerPr
   let t = 0;
   app.ticker.add(() => {
     t++;
-    enemySprite.width = size * (Math.cos(t / 30) * 0.008 + 0.996)
-    enemySprite.height = size * (Math.cos(t / 30) * 0.012 + 0.994)
+    enemySprite.width = size * (Math.cos(t / 30) * 0.008 + 0.996);
+    enemySprite.height = size * (Math.cos(t / 30) * 0.012 + 0.994);
   })
 
   return container
