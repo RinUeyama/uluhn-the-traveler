@@ -8,7 +8,7 @@ export type IBattleCommandProps = {
   icon: IImage;
   name: string;
   actionSign: IBattleActionSignProps
-  callback: MouseEventHandler<HTMLButtonElement>;
+  callback?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 export const BattleCommand: React.VFC<IBattleCommandProps> = ({
@@ -17,9 +17,13 @@ export const BattleCommand: React.VFC<IBattleCommandProps> = ({
   actionSign,
   callback
 }) => {
+  const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    callback && callback(e);
+  }
 
   return (
-    <button type="button">
+    <button type="button" className={style['battle-ally-command']} onClick={handleClick}>
+      <img className={style['icon']} {...icon} />
     </button>
   )
 }
