@@ -23,7 +23,7 @@ const TemplateBattle: React.VFC<ITemplateBattleProps> = ({ containers, enemyHpBa
   const onElementLoaded = (element: HTMLDivElement) => {
     if (!element) return
 
-    const app = createPixiApp(element);
+    const app = createPixiApp(element, { height: 0.56 * window.innerHeight / window.devicePixelRatio });
 
     const backgroundContainer = createCommonBackgroundContainer({ app, background: containers.background });
     app.stage.addChild(backgroundContainer);
@@ -35,17 +35,22 @@ const TemplateBattle: React.VFC<ITemplateBattleProps> = ({ containers, enemyHpBa
   }
 
   return (
-    <div className={style['template-battle']} ref={onElementLoaded}>
-      <div className={style['enemy-hp-bar']}>
-        <BattleEnemyHpBar {...enemyHpBar} type='boss' />
+    <div className={style['template-battle']}>
+      <div className={style['enemy-canvas']} ref={onElementLoaded}>
+        <div className={style['hp']}>
+          <BattleEnemyHpBar {...enemyHpBar} type='boss' />
+        </div>
+        <div className={style['info']}>
+          <div className={style['action']}>
+            <BattleActionSign type={ACTION_TYPE.ATTACK} potency={7} />
+          </div>
+          <div className={style['status']}>
+            <BattleBuffIcon buff={BUFF.ATTACK_UP} />
+            <BattleDebuffIcon debuff={DEBUFF.ATTACK_DOWN} />
+          </div>
+        </div>
       </div>
-      <div className={style['enemy-status']}>
-        <BattleBuffIcon buff={BUFF.ATTACK_UP} />
-        <BattleDebuffIcon debuff={DEBUFF.ATTACK_DOWN} />
-      </div>
-      <div className={style['enemy-action']}>
-        <BattleActionSign type={ACTION_TYPE.ATTACK} potency={7} />
-      </div>
+      <div className={style['ally-window']}></div>
     </div>
   )
 }

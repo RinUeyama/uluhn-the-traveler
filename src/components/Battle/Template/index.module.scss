@@ -1,23 +1,29 @@
-.template-battle {
+.enemy-canvas {
   position: relative;
 
-  > .enemy-hp-bar {
+  > .hp {
     position: absolute;
     top: 2rem;
   }
 
-  > .enemy-status {
+  > .info {
     position: absolute;
-    top: 30vh;
-    width: 3rem;
+    top: 4rem;
+    left: 3rem;
+    display: flex;
+    gap: var(--space-s);
+  }
+
+  > .info > .status {
+    display: flex;
     height: 3rem;
   }
 
-  > .enemy-action {
-    position: absolute;
-    top: 30vh;
-    right: 10vw;
-    width: 6rem;
-    height: 6rem;
+  > .info > .action {
+    width: 3rem;
+    height: 3rem;
   }
+}
+
+.ally-window {
 }
