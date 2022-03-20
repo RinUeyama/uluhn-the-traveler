@@ -44,7 +44,7 @@ export const createBattleEnemyContainer = ({app, enemy}: IBattleEnemyContainerPr
   const enemySprite = PIXI.Sprite.from(enemy.image.src);
   enemySprite.anchor.set(0.5, 0.5);
   enemySprite.x = enemy.options?.position?.x || app.screen.width / 2;
-  enemySprite.y = enemy.options?.position?.y || app.screen.height / 1.7;
+  enemySprite.y = enemy.options?.position?.y || app.screen.height / 1.5;
   enemySprite.width = size;
   enemySprite.height = size;
   container.addChild(enemySprite);
@@ -52,8 +52,8 @@ export const createBattleEnemyContainer = ({app, enemy}: IBattleEnemyContainerPr
   let t = 0;
   app.ticker.add(() => {
     t++;
-    enemySprite.width = size * (Math.sin(t / 100) * 0.024 + 0.986)
-    enemySprite.height = size * (Math.cos(t / 60) * 0.024 + 0.986)
+    enemySprite.width = size * (Math.cos(t / 30) * 0.008 + 0.996)
+    enemySprite.height = size * (Math.cos(t / 30) * 0.012 + 0.994)
   })
 
   return container
