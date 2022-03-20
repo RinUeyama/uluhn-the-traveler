@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js'
-import { IPixiSpriteOptions } from 'src/interfaces/i-pixi'
+import { IPixiSpriteOptions } from 'src/interfaces/pixi'
 
 // TODO: 汎用化
 export type IImage = {

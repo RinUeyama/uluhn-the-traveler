@@ -1,3 +1,5 @@
+import DUMMY from 'src/assets/images/battle/action/battle-debuff-sample.png'
+
 // 4~8種類くらいにしたい
 export const DEBUFF = {
   /**
@@ -6,7 +8,7 @@ export const DEBUFF = {
   ATTACK_DOWN: {
     id: 'attack-down',
     name: '攻撃力低下',
-    src: '',
+    src: DUMMY.src,
     description: '攻撃力が30％低下する（切り上げ）'
   }
   /**

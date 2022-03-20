@@ -1,9 +1,11 @@
+import DUMMY from 'src/assets/images/battle/action/battle-buff-sample.png'
+
 // 3~5種類くらいにしたい
 export const BUFF = {
   ATTACK_UP: {
     id: 'attack-up',
     name: '攻撃力上昇',
-    src: '',
+    src: DUMMY.src,
     description: '攻撃力が30％上昇する（切り捨て）'
   },
   ARMOR: {

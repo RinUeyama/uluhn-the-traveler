@@ -1,4 +1,4 @@
-import { IBuff } from "src/interfaces/i-battle"
+import { IBuff } from "src/interfaces/battle"
 import style from './BattleBuffIcon.module.scss'
 
 export type IBattleBuffIconProps = {

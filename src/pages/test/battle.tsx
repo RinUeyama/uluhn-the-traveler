@@ -19,7 +19,7 @@ const SAMPLE_PROPS = {
 }
 
 const Index: NextPage = () => {
-  const Canvas = dynamic(() => import('src/components/Battle/Template/index'), {
+  const Canvas = dynamic(() => import('src/components/battle/template/index'), {
     ssr: false
   })
 

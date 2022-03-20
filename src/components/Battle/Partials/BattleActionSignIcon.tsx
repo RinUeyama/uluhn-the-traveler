@@ -1,5 +1,5 @@
 import style from './BattleActionSignIcon.module.scss'
-import { IActionType } from 'src/interfaces/i-battle'
+import { IActionType } from 'src/interfaces/battle'
 
 export type IBattleActionSignProps = {
   type: IActionType

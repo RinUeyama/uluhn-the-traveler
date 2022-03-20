@@ -1,14 +1,14 @@
 import { createCommonBackgroundContainer, IPixiBackground } from 'src/pixi/containers/common/commonBackgroundContainer';
 import { createBattleEnemyContainer, IPixiEnemy } from 'src/pixi/containers/battle/battleContainerEnemy';
 import { createPixiApp } from 'src/utils/pixiUtil'
-import { BattleEnemyHpBar, IBattleEnemyHpBarProps } from '../BattleEnemyHpBar';
+import { BattleEnemyHpBar, IBattleEnemyHpBarProps } from '../enemy/BattleEnemyHpBar';
 import style from './index.module.scss'
-import { BattleBuffIcon } from '../Partials/BattleBuffIcon';
+import { BattleBuffIcon } from '../partials/BattleBuffIcon';
 import { BUFF } from 'src/constants/battle/battle-buff';
 import { DEBUFF } from 'src/constants/battle/battle-debuff';
 import { ACTION_TYPE } from 'src/constants/battle/battle-action';
-import { BattleDebuffIcon } from '../Partials/BattleDebuffIcon';
-import { BattleActionSign } from '../Partials/BattleActionSignIcon';
+import { BattleDebuffIcon } from '../partials/BattleDebuffIcon';
+import { BattleActionSign } from '../partials/BattleActionSignIcon';
 
 export type ITemplateBattleProps = {
   containers: {

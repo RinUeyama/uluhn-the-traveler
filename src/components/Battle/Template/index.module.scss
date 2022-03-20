@@ -1,5 +1,6 @@
 .enemy-canvas {
   position: relative;
+  height: 56vh;
 
   > .hp {
     position: absolute;
@@ -29,4 +30,9 @@
 }
 
 .ally-window {
+  height: 44vh;
+  border: 2px solid var(--color-beige-darken);
+  backdrop-filter: blur(4px) sepia(0.15);
+  filter: drop-shadow(inset 2px 2px var(--color-darkblue));
+  /** TODO: 羊皮紙のような背景画像 */
 }

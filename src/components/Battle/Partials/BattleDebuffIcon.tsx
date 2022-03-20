@@ -1,4 +1,4 @@
-import { IDebuff } from "src/interfaces/i-battle"
+import { IDebuff } from "src/interfaces/battle"
 import style from './BattleDebuffIcon.module.scss'
 
 export type IBattleDebuffIconProps = {

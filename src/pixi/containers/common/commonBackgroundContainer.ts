@@ -1,7 +1,7 @@
 
 import * as PIXI from 'pixi.js'
-import { IImage } from 'src/interfaces/i-common'
-import { IPixiSpriteOptions } from 'src/interfaces/i-pixi'
+import { IImage } from 'src/interfaces/common'
+import { IPixiSpriteOptions } from 'src/interfaces/pixi'
 
 export type IPixiBackground = {
   image: IImage,
