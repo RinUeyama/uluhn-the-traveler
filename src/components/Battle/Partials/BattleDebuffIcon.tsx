@@ -1,5 +1,5 @@
 import { IDebuff } from "src/interfaces/i-battle"
-import style from './BattleBuffIcon.module.scss'
+import style from './BattleDebuffIcon.module.scss'
 
 export type IBattleDebuffIconProps = {
   debuff: IDebuff
@@ -7,7 +7,7 @@ export type IBattleDebuffIconProps = {
 
 export const BattleDebuffIcon: React.VFC<IBattleDebuffIconProps> = ({ debuff }) => {
   return (
-    <div className={style['battle-action-sign']}>
+    <div className={style['battle-debuff-icon']}>
       <img className={style['icon']} src={debuff.src} alt={debuff.name} />
       {/** TODO: タップしたらモーダルで説明を出す */}
     </div>

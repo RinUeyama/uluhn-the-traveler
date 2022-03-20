@@ -9,19 +9,22 @@
   > .info {
     position: absolute;
     top: 4rem;
-    left: 3rem;
+    left: 10vw;
+    width: 80vw;
     display: flex;
-    gap: var(--space-s);
-  }
-
-  > .info > .status {
-    display: flex;
-    height: 3rem;
+    justify-content: space-between;
+    gap: var(--space-xl);
   }
 
   > .info > .action {
     width: 3rem;
     height: 3rem;
+  }
+
+  > .info > .status {
+    display: flex;
+    height: 3rem;
+    gap: var(--space-s);
   }
 }
 

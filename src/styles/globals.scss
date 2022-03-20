@@ -25,12 +25,12 @@ img {
 :root {
   /** space */
   --space-unit: 0.5rem;
-  --space-xs: 1 * var(--space-unit);
-  --space-s: 2 * var(--space-unit);
-  --space-m: 3 * var(--space-unit);
-  --space-l: 5 * var(--space-unit);
-  --space-xl: 8 * var(--space-unit);
-  --space-xxl: 13 * var(--space-unit);
+  --space-xs: calc(1 * var(--space-unit));
+  --space-s: calc(2 * var(--space-unit));
+  --space-m: calc(3 * var(--space-unit));
+  --space-l: calc(5 * var(--space-unit));
+  --space-xl: calc(8 * var(--space-unit));
+  --space-xxl: calc(13 * var(--space-unit));
 
   /** color */
   --color-green: #86ab7a;
