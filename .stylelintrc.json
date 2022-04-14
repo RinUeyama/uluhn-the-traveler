@@ -1,6 +1,6 @@
 {
   "plugins": ["stylelint-order"],
-  "extends": ["stylelint-config-standard"],
+  "extends": ["stylelint-config-standard-scss"],
   "rules": {
     "at-rule-no-unknown": [
       true,
@@ -19,5 +19,5 @@
     "order/properties-alphabetical-order": true,
     "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^-([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
   },
-  "ignoreFiles": ["**/node_modules/**", "/out/**", "/src/styles/**"]
+  "ignoreFiles": ["**/node_modules/**", "**/out/**", "/src/styles/**"]
 }
