@@ -1,0 +1,21 @@
+.battle-action-sign {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 40%;
+  border: 2px solid var(--color-beige-darken);
+  backdrop-filter: blur(4px) sepia(0.15);
+  filter: drop-shadow(1px 1px var(--color-darkblue));
+  padding: 0.5rem;
+
+  > .potency {
+    margin: 0;
+    line-height: 0;
+    text-shadow: 1px 1px var(--color-darkblue-darken);
+    color: var(--color-white);
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+  }
+}

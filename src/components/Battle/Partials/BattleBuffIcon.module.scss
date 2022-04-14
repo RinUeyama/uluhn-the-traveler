@@ -1,0 +1,9 @@
+.battle-buff-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 40%;
+  border: 2px solid var(--color-beige-darken);
+  backdrop-filter: blur(4px) sepia(0.15);
+  filter: drop-shadow(1px 1px var(--color-darkblue));
+  padding: 0.25rem;
+}

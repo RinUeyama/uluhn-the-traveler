@@ -1,0 +1,38 @@
+.enemy-canvas {
+  position: relative;
+  height: 56vh;
+
+  > .hp {
+    position: absolute;
+    top: 2rem;
+  }
+
+  > .info {
+    position: absolute;
+    top: 5rem;
+    left: 10vw;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
+  > .info > .action {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  > .info > .status {
+    display: flex;
+    height: 3rem;
+    gap: var(--space-s);
+  }
+}
+
+.ally-window {
+  height: 44vh;
+  border: 2px solid var(--color-beige-darken);
+  backdrop-filter: blur(4px) sepia(0.15);
+  filter: drop-shadow(inset 2px 2px var(--color-darkblue));
+  /** TODO: 羊皮紙のような背景画像 */
+}
